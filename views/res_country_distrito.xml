@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="res_country_distrito_form" model="ir.ui.view">
+        <field name="name">res.country.distrito.form</field>
+        <field name="model">res.country.distrito</field>
+        <field name="arch" type="xml">
+           <form string="Distrito" edit="true" create="true" delete="true">
+                <sheet>
+                    <group col="4" colspan="4">
+                        <field name="name" readonly="0" required="1"/>
+                        <field name="code" readonly="0" required="1"/>
+                        <field name="canton_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                        <field name="state_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                        <field name="country_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                        
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="res_country_distrito_tree" model="ir.ui.view">
+        <field name="name">res.country.distrito.tree</field>
+        <field name="model">res.country.distrito</field>
+        <field name="arch" type="xml">
+            <tree string="distrito" create="true" delete="true">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="canton_id"/>
+                <field name="state_id"/>
+                <field name="country_id"/>
+                
+            </tree>
+        </field>
+    </record>
+    
+    <record id="res_country_distrito_select" model="ir.ui.view">
+        <field name="name">res.country.distrito.select</field>
+        <field name="model">res.country.distrito</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <search string="res.country.distrito">
+                <field name="name" modifiers="{}"/>
+                <filter context="{'group_by': 'country_id'}" name="country_id" string="País"/>
+                <filter context="{'group_by': 'state_id'}" name="state_id" string="Provincia"/>
+                <filter context="{'group_by': 'canton_id'}" name="canton_id" string="Canton"/>
+                <filter context="{'group_by': 'name'}" name="name" string="Distrito"/>
+            </search>            
+        </field>
+    </record>
+    
+    <record id="action_distrito" model="ir.actions.act_window">
+        <field name="name">Distrito</field>
+        <field name="res_model">res.country.distrito</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    
+    <menuitem
+        id="contacts.menu_country_distrito"
+        name="Distrito"
+        parent="contacts.menu_localisation"
+        action="action_distrito"
+        sequence="11"
+    />
+    
+</odoo>

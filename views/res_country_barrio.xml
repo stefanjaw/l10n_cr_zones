@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="res_country_barrio_form" model="ir.ui.view">
+        <field name="name">res.country.barrio.form</field>
+        <field name="model">res.country.barrio</field>
+        <field name="arch" type="xml">
+           <form string="Barrio" edit="true" create="true" delete="true">
+                <sheet>
+                    <group col="4" colspan="4">
+                        <field name="name" readonly="0" required="1"/>
+                        <field name="code" readonly="0" required="1"/>
+                        <field name="distrito_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                        <field name="canton_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                        <field name="state_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                        <field name="country_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="res_country_barrio_tree" model="ir.ui.view">
+        <field name="name">res.country.barrio.tree</field>
+        <field name="model">res.country.barrio</field>
+        <field name="arch" type="xml">
+            <tree string="barrio" create="true" delete="true">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="distrito_id"/>
+                <field name="canton_id"/>
+                <field name="state_id"/>
+                <field name="country_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="res_country_barrio_select" model="ir.ui.view">
+        <field name="name">res.country.barrio.select</field>
+        <field name="model">res.country.barrio</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <search string="res.country.barrio">
+                <field name="name" modifiers="{}"/>
+                <filter context="{'group_by': 'country_id'}" name="country_id" string="País"/>
+                <filter context="{'group_by': 'state_id'}" name="state_id" string="Provincia"/>
+                <filter context="{'group_by': 'canton_id'}" name="canton_id" string="Canton"/>
+                <filter context="{'group_by': 'distrito_id'}" name="distrito_id" string="Distrito"/>
+                <filter context="{'group_by': 'name'}" name="name" string="Barrio"/>
+            </search>            
+        </field>
+    </record>
+    
+    <record id="action_barrio" model="ir.actions.act_window">
+        <field name="name">Barrio</field>
+        <field name="res_model">res.country.barrio</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    
+    <menuitem
+        id="contacts.menu_country_barrio"
+        name="Barrio"
+        parent="contacts.menu_localisation"
+        action="action_barrio"
+        sequence="12"
+    />
+    
+</odoo>

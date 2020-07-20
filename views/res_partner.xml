@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <!-- Inherit Form view -->
+    <record id="res_partner_form_inherit_cr" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority">98</field>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='country_id']" position="attributes">
+                <attribute name="attrs">{
+                    "readonly": [["type","=","contact"],["parent_id","!=",False]],
+                    "invisible": True }
+                </attribute>
+            </xpath>
+  
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='state_id']" position="attributes">
+                <attribute name="attrs">{
+                    "readonly": [["type","=","contact"], ["parent_id","!=",False]],
+                    "invisible": [["country_id_code","=","CR"]] }
+                </attribute>
+                <attribute name="placeholder">Provincia</attribute>
+            </xpath>
+  
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='city']" position="attributes">
+                <attribute name="attrs">{
+                    "readonly": [["type","=","contact"],["parent_id","!=",False]],
+                    "invisible": [["country_id_code","=","CR"]] }
+                </attribute>
+            </xpath>
+  
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='zip']" position="attributes">
+                <attribute name="attrs">{
+                    "readonly": [["type","=","contact"],["parent_id","!=",False]],
+                    "invisible": [["country_id_code","=","CR"]] }
+                </attribute>
+            </xpath>
+  
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='street']" position="attributes">
+                <attribute name="placeholder">Otras señas</attribute>
+            </xpath>
+  
+        <field name="street" position="before">
+
+            <field name="country_id" string="País"
+                   options="{'no_create': True, 'no_create_edit': True}"
+                   placeholder="Country Code"/>
+            <field name="country_id_code" invisible="1" />
+            <br/>
+            <field name="state_id" string="Provincia" placeholder="Provincia"
+                domain="[('country_id', '=',country_id)]" options="{'no_create': True, 'no_create_edit': True}"
+                attrs="{'invisible':[('country_id_code', '!=', 'CR') ]}" />
+            <br/>
+            <field name="canton_id" string="Canton" placeholder="Canton" domain="[('state_id', '=',state_id)]"
+                options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
+                attrs="{'invisible':[('country_id_code', '!=', 'CR') ]}" />
+            <br/>
+            <field name="distrito_id" string="Distrito" placeholder="Distrito" domain="[('canton_id', '=',canton_id)]" 
+                options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
+                attrs="{'invisible':[('country_id_code', '!=', 'CR') ]}" />
+            <br/>
+            <field name="barrio_id" string="Barrio" placeholder="Barrio" domain="[('distrito_id', '=',distrito_id)]"
+                options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
+                attrs="{'invisible':[('country_id_code', '!=', 'CR') ]}" />
+            </field>
+            
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_search_customization">
+        <field name="name">res.partner.search.customization</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="priority">98</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//filter[@name='group_country']" position="after">
+                    <filter context="{'group_by': 'state_id'}" name="state_id" string="State"/>
+                    <filter context="{'group_by': 'canton_id'}" name="canton_id" string="Canton"/>
+                    <filter context="{'group_by': 'distrito_id'}" name="distrito_id" string="Distrito"/>
+                    <filter context="{'group_by': 'barrio_id'}" name="barrio_id" string="Barrio"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+    
+</odoo>
+

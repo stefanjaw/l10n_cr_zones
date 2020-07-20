@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="res_country_canton_form" model="ir.ui.view">
+        <field name="name">res.country.canton.form</field>
+        <field name="model">res.country.canton</field>
+        <field name="arch" type="xml">
+           <form string="Canton" edit="true" create="true" delete="true">
+                <sheet>
+                    <group col="4" colspan="4">
+                        <field name="name" readonly="0" required="1"/>
+                        <field name="code" readonly="0" required="1"/>
+                        <field name="country_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                        <field name="state_id" readonly="0" options="{'no_create': True, 'no_create_edit': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="res_country_canton_tree" model="ir.ui.view">
+        <field name="name">res.country.canton.tree</field>
+        <field name="model">res.country.canton</field>
+        <field name="arch" type="xml">
+            <tree string="Canton" create="true" delete="true">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="state_id"/>
+                <field name="country_id"/>
+                
+            </tree>
+        </field>
+    </record>
+    
+    <record id="res_country_canton_select" model="ir.ui.view">
+        <field name="name">res.country.canton.select</field>
+        <field name="model">res.country.canton</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <search string="res.country.canton">
+                <field name="name" modifiers="{}"/>
+                <filter context="{'group_by': 'country_id'}" name="country_id" string="País"/>
+                <filter context="{'group_by': 'state_id'}" name="state_id" string="Provincia"/>
+            </search>            
+        </field>
+    </record>
+    
+    <record id="action_canton" model="ir.actions.act_window">
+        <field name="name">Canton</field>
+        <field name="res_model">res.country.canton</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+    
+    <menuitem
+        id="contacts.menu_country_canton"
+        name="Canton"
+        parent="contacts.menu_localisation"
+        action="action_canton"
+        sequence="10"
+    />
+    
+</odoo>
