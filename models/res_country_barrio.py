@@ -7,7 +7,7 @@ class Barrio(models.Model):
 
     name = fields.Char(string="Barrio Name")
     code = fields.Char(string="Barrio Code")
-    
+    comments = fields.Char(string="Comments")    
     
     distrito_id = fields.Many2one("res.country.distrito", string="Distrito")
     canton_id = fields.Char(string='Canton',related='distrito_id.canton_id.name', store=True)
