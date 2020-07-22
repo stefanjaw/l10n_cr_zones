@@ -66,6 +66,7 @@
             <field name="canton_id_comments"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible': [ '&amp;', ['country_id_code','!=','CR'], ['canton_id_comments', '=', False] ]}" />
+            <br attrs="{'invisible':[('state_id', '=', False) ]}"/>
             
             <field name="distrito_id" string="Distrito" placeholder="Distrito" domain="[('canton_id', '=',canton_id)]" 
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
@@ -74,6 +75,7 @@
             <field name="distrito_id_comments"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible': [ '&amp;', ['distrito_id','=',False], ['distrito_id_comments', '=', False] ]}" />
+            <br attrs="{'invisible':[('canton_id', '=', False) ]}"/>
             
             <field name="barrio_id" string="Barrio" placeholder="Barrio" domain="[('distrito_id', '=',distrito_id)]"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
