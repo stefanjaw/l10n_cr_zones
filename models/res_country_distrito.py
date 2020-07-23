@@ -7,7 +7,7 @@ class Distrito(models.Model):
 
     name = fields.Char(string="Distrito Name")
     code = fields.Char(string="Distrito Code")
-    comments = fields.Char(string="Comments")
+    comments = fields.Char(string="Distrito Comments")
 
     canton_id = fields.Many2one("res.country.canton", string="Canton")
     state_id = fields.Char(string='Provincia',related='canton_id.state_id.name', store=True)
