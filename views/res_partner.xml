@@ -48,7 +48,7 @@
   
         <field name="street" position="before">
 
-            <field name="country_id" string="País"
+          <field name="country_id" string="País"
                    options="{'no_create': True, 'no_create_edit': True}"
                    placeholder="Country Code"/>
             <field name="country_id_code" invisible="1" />
@@ -62,25 +62,25 @@
             <field name="canton_id" string="Canton" placeholder="Canton" domain="[('state_id', '=',state_id)]"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible':[('state_id', '=', False) ]}" />
-            <br attrs="{'invisible':[('state_id', '=', False) ]}"/>
+            <span attrs="{'invisible':[('canton_id_comments', '=', False) ]}"> - </span>
             <field name="canton_id_comments"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible': [ '&amp;', ['country_id_code','!=','CR'], ['canton_id_comments', '=', False] ]}" />
-            <br attrs="{'invisible':[('state_id', '=', False) ]}"/>
+            <br attrs="{'invisible':[('canton_id', '=', False) ]}"/>
             
             <field name="distrito_id" string="Distrito" placeholder="Distrito" domain="[('canton_id', '=',canton_id)]" 
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible':[('canton_id', '=', False) ]}" />
-            <br attrs="{'invisible':[('canton_id', '=', False) ]}"/>
+            <span attrs="{'invisible':[('distrito_id_comments', '=', False) ]}"> - </span>
             <field name="distrito_id_comments"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible': [ '&amp;', ['distrito_id','=',False], ['distrito_id_comments', '=', False] ]}" />
-            <br attrs="{'invisible':[('canton_id', '=', False) ]}"/>
+            <br attrs="{'invisible':[('distrito_id', '=', False) ]}"/>
             
             <field name="barrio_id" string="Barrio" placeholder="Barrio" domain="[('distrito_id', '=',distrito_id)]"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible':[('distrito_id', '=', False) ]}" />
-            <br attrs="{'invisible':[('distrito_id', '=', False) ]}"/>
+            <span attrs="{'invisible':[('barrio_id_comments', '=', False) ]}"> - </span>
             <field name="barrio_id_comments"
                 options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                 attrs="{'invisible': [ '&amp;', ['barrio_id','=',False], ['distrito_id_comments', '=', False] ]}" />
