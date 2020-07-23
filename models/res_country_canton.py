@@ -7,7 +7,7 @@ class Canton(models.Model):
 
     name = fields.Char(string="Canton Name")
     code = fields.Char(string="Canton Code")
-    comments = fields.Char(string="Comments")
+    comments = fields.Char(string="Canton Comments")
 
     state_id = fields.Many2one("res.country.state", string="Provincia")
     country_id = fields.Char(string='País',related='state_id.country_id.name', store=True)
