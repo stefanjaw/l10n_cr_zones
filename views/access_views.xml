@@ -2,9 +2,11 @@
     <data>
 
         <!-- Group Access to Contacts Configuration Canton-->
+        <!--
         <record id="contacts.menu_country_canton" model="ir.ui.menu">
             <field name="groups_id" eval="[ (4, ref('base.group_system') ) ]"/>
         </record>
+        -->
 
     </data>
 </odoo>
