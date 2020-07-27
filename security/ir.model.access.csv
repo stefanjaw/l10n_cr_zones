@@ -1,4 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_res_country_canton, res_country_canton,model_res_country_canton,base.group_system,1,1,1,1
+access_res_country_canton_ro, res_country_canton,model_res_country_canton,base.group_user,1,0,0,0
 access_res_country_distrito, res_country_distrito,model_res_country_distrito,base.group_system,1,1,1,1
+access_res_country_distrito_ro, res_country_distrito,model_res_country_distrito,base.group_user,1,0,0,0
 access_res_country_barrio, res_country_barrio,model_res_country_barrio,base.group_system,1,1,1,1
+access_res_country_barrio_ro, res_country_barrio,model_res_country_barrio,base.group_user,1,0,0,0
