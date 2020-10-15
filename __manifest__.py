@@ -32,6 +32,9 @@
         'views/res_country_barrio.xml',
         'views/access_views.xml',
         'views/res_partner.xml',
+        'data/res.country.canton.csv',
+        'data/res.country.distrito.csv',
+        'data/res.country.barrio.csv',
     ],
     # only loaded in demonstration mode
     'demo': [
