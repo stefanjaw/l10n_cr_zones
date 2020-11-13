@@ -1,13 +1,13 @@
-id,name,code,state_id
-506_1_1,San José,1,San José
-506_1_2,Escazú,2,San José
-506_1_3,Desamparados,3,San José
-506_1_4,Puriscal,4,San José
-506_1_5,Tarrazú,5,San José
-506_1_6,Aserrí,6,San José
-506_1_7,Mora,7,San José
-506_1_8,Goicochea,8,San José
-506_1_9,Santa Ana,9,San José
+canton_id,Canton Name,canton code,Provincia
+506_1_01,San José,01,San José
+506_1_02,Escazú,02,San José
+506_1_03,Desamparados,03,San José
+506_1_04,Puriscal,04,San José
+506_1_05,Tarrazú,05,San José
+506_1_06,Aserrí,06,San José
+506_1_07,Mora,07,San José
+506_1_08,Goicochea,08,San José
+506_1_09,Santa Ana,09,San José
 506_1_10,Alajuelita,10,San José
 506_1_11,Vásquez de Coronado,11,San José
 506_1_12,Acosta,12,San José
@@ -19,64 +19,64 @@ id,name,code,state_id
 506_1_18,Curridabat,18,San José
 506_1_19,Pérez Zeledón,19,San José
 506_1_20,León Cortes,20,San José
-506_2_1,ALAJUELA,1,Alajuela
-506_2_2,SAN RAMON,2,Alajuela
-506_2_3,GRECIA,3,Alajuela
-506_2_4,SAN MATEO,4,Alajuela
-506_2_5,ATENAS,5,Alajuela
-506_2_6,NARANJO,6,Alajuela
-506_2_7,PALMARES,7,Alajuela
-506_2_8,POAS,8,Alajuela
-506_2_9,OROTINA,9,Alajuela
+506_2_01,ALAJUELA,01,Alajuela
+506_2_02,SAN RAMON,02,Alajuela
+506_2_03,GRECIA,03,Alajuela
+506_2_04,SAN MATEO,04,Alajuela
+506_2_05,ATENAS,05,Alajuela
+506_2_06,NARANJO,06,Alajuela
+506_2_07,PALMARES,07,Alajuela
+506_2_08,POAS,08,Alajuela
+506_2_09,OROTINA,09,Alajuela
 506_2_10,SAN CARLOS,10,Alajuela
 506_2_11,ALFARO RUIZ,11,Alajuela
 506_2_12,VALVERDE VEGA,12,Alajuela
 506_2_13,UPALA,13,Alajuela
 506_2_14,LOS CHILES,14,Alajuela
 506_2_15,GUATUSO,15,Alajuela
-506_3_1,CARTAGO,1,Cartago
-506_3_2,PARAISO,2,Cartago
-506_3_3,LA UNION,3,Cartago
-506_3_4,JIMENEZ,4,Cartago
-506_3_5,TURRIALBA,5,Cartago
-506_3_6,ALVARADO,6,Cartago
-506_3_7,OREAMUNO,7,Cartago
-506_3_8,EL GUARCO,8,Cartago
-506_4_1,HEREDIA,1,Heredia
-506_4_2,BARVA,2,Heredia
-506_4_3,SANTO DOMINGO,3,Heredia
-506_4_4,SANTA BARBARA,4,Heredia
-506_4_5,SAN RAFAEL,5,Heredia
-506_4_6,SAN ISIDRO,6,Heredia
-506_4_7,BELEN,7,Heredia
-506_4_8,FLORES,8,Heredia
-506_4_9,SAN PABLO,9,Heredia
+506_3_01,CARTAGO,01,Cartago
+506_3_02,PARAISO,02,Cartago
+506_3_03,LA UNION,03,Cartago
+506_3_04,JIMENEZ,04,Cartago
+506_3_05,TURRIALBA,05,Cartago
+506_3_06,ALVARADO,06,Cartago
+506_3_07,OREAMUNO,07,Cartago
+506_3_08,EL GUARCO,08,Cartago
+506_4_01,HEREDIA,01,Heredia
+506_4_02,BARVA,02,Heredia
+506_4_03,SANTO DOMINGO,03,Heredia
+506_4_04,SANTA BARBARA,04,Heredia
+506_4_05,SAN RAFAEL,05,Heredia
+506_4_06,SAN ISIDRO,06,Heredia
+506_4_07,BELEN,07,Heredia
+506_4_08,FLORES,08,Heredia
+506_4_09,SAN PABLO,09,Heredia
 506_4_10,SARAPIQUI,10,Heredia
-506_5_1,LIBERIA,1,Guanacaste
-506_5_2,NICOYA,2,Guanacaste
-506_5_3,SANTA CRUZ,3,Guanacaste
-506_5_4,BAGACES,4,Guanacaste
-506_5_5,CARRILLO,5,Guanacaste
-506_5_6,CAÑAS,6,Guanacaste
-506_5_7,ABANGARES,7,Guanacaste
-506_5_8,TILARAN,8,Guanacaste
-506_5_9,NANDAYURE,9,Guanacaste
+506_5_01,LIBERIA,01,Guanacaste
+506_5_02,NICOYA,02,Guanacaste
+506_5_03,SANTA CRUZ,03,Guanacaste
+506_5_04,BAGACES,04,Guanacaste
+506_5_05,CARRILLO,05,Guanacaste
+506_5_06,CAÑAS,06,Guanacaste
+506_5_07,ABANGARES,07,Guanacaste
+506_5_08,TILARAN,08,Guanacaste
+506_5_09,NANDAYURE,09,Guanacaste
 506_5_10,LA CRUZ,10,Guanacaste
 506_5_11,HOJANCHA,11,Guanacaste
-506_6_1,PUNTARENAS,1,Puntarenas
-506_6_2,ESPARZA,2,Puntarenas
-506_6_3,BUENOS AIRES,3,Puntarenas
-506_6_4,MONTES DE ORO,4,Puntarenas
-506_6_5,OSA,5,Puntarenas
-506_6_6,AGUIRRE,6,Puntarenas
-506_6_7,GOLFITO,7,Puntarenas
-506_6_8,COTO BRUS,8,Puntarenas
-506_6_9,PARRITA,9,Puntarenas
+506_6_01,PUNTARENAS,01,Puntarenas
+506_6_02,ESPARZA,02,Puntarenas
+506_6_03,BUENOS AIRES,03,Puntarenas
+506_6_04,MONTES DE ORO,04,Puntarenas
+506_6_05,OSA,05,Puntarenas
+506_6_06,AGUIRRE,06,Puntarenas
+506_6_07,GOLFITO,07,Puntarenas
+506_6_08,COTO BRUS,08,Puntarenas
+506_6_09,PARRITA,09,Puntarenas
 506_6_10,CORREDORES,10,Puntarenas
 506_6_11,GARABITO,11,Puntarenas
-506_7_1,LIMON,1,Limón
-506_7_2,POCOCI,2,Limón
-506_7_3,SIQUIRRES,3,Limón
-506_7_4,TALAMANCA,4,Limón
-506_7_5,MATINA,5,Limón
-506_7_6,GUACIMO,6,Limón
+506_7_01,LIMON,01,Limón
+506_7_02,POCOCI,02,Limón
+506_7_03,SIQUIRRES,03,Limón
+506_7_04,TALAMANCA,04,Limón
+506_7_05,MATINA,05,Limón
+506_7_06,GUACIMO,06,Limón
