@@ -1,4 +1,4 @@
-id,Canton Name,canton code,Provincia
+id,name,code,state_id
 506_1_01,San José,01,San José
 506_1_02,Escazú,02,San José
 506_1_03,Desamparados,03,San José
