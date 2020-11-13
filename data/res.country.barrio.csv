@@ -1,4 +1,4 @@
-id,Barrio Name,barrio code,distrito_id
+id,name,code,distrito_id:id
 506_1_01_01_01,Amón,01,506_1_01_01
 506_1_01_01_02,Aranjuez,02,506_1_01_01
 506_1_01_01_03,California (parte),03,506_1_01_01
