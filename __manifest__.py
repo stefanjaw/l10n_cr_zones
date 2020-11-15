@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Costa Rica - Zones for Electronic Invoices",
+    'name': "Costa Rica - Zones for Edi",
 
-    'summary': """Costa Rica - Zones for Electronic Invoices.""",
+    'summary': """Costa Rica - Zones for Edi.""",
 
     'description': """
-        Costa Rica - Zones for Electronic Invoices.
+        Costa Rica - Zones for Edi.
     """,
 
     'author': "Avalantec",
