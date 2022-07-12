@@ -4,10 +4,11 @@ from odoo import models, fields, api
 
 class Barrio(models.Model):
     _name = "res.country.barrio"
+    _description = "res.country.barrio"
 
     name = fields.Char(string="Barrio Name")
     code = fields.Char(string="Barrio Code")
-    
+    comments = fields.Char(string="Barrio Comments")    
     
     distrito_id = fields.Many2one("res.country.distrito", string="Distrito")
     canton_id = fields.Char(string='Canton',related='distrito_id.canton_id.name', store=True)
