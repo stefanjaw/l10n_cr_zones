@@ -9,7 +9,7 @@
         <field name="priority">98</field>
         <field name="arch" type="xml">
             
-            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/div[1]/field[@name='country_id']" position="attributes">
+            <xpath expr="//field[@name='country_id']" position="attributes">
                 <attribute name="attrs">{
                     "readonly": [["type","=","contact"],["parent_id","!=",False]],
                     "invisible": True }
