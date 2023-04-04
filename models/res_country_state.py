@@ -4,6 +4,7 @@ from odoo import models, fields, api
 
 class Distrito(models.Model):
     _name = "res.country.distrito"
+    _description = "Distrito"
 
     name = fields.Char(string="Distrito Name")
     code = fields.Char(string="Distrito Code")
