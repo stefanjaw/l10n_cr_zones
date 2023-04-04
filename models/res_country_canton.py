@@ -4,6 +4,7 @@ from odoo import models, fields, api
 
 class Canton(models.Model):
     _name = "res.country.canton"
+    _description = "Cantones"
 
     name = fields.Char(string="Canton Name")
     code = fields.Char(string="Canton Code")
