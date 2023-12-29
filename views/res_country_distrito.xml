@@ -43,7 +43,7 @@
         <field name="priority">99</field>
         <field name="arch" type="xml">
             <search string="res.country.distrito">
-                <field name="name" modifiers="{}"/>
+                <field name="name" domain="{}"/>
                 <filter context="{'group_by': 'country_id'}" name="country_id" string="País"/>
                 <filter context="{'group_by': 'state_id'}" name="state_id" string="Provincia"/>
                 <filter context="{'group_by': 'canton_id'}" name="canton_id" string="Canton"/>
